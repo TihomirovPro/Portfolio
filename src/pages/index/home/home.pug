@@ -1,3 +1,6 @@
+mixin socLink(data)
+  +e.A.link(href=data.href target='_blank' rel='nofollow' title=data.title style='background-image: url(img/' + data.icon + ')')
+
 mixin home()
   +b.SECTION.home.sectionPage#home
     +e.container.wrapper
@@ -5,7 +8,7 @@ mixin home()
         +e.H1.name Сергей Тихомиров
         +e.H2.skill Frontend developer
         +e.links
-          +e.A.link(href=site.vk target='_blank' rel='nofollow' style='background-image: url(img/vk.svg)')
-          +e.A.link(href=site.telegramLink target='_blank' rel='nofollow' style='background-image: url(img/telegram.svg)')
-          +e.A.link(href=site.skypeLink target='_blank' rel='nofollow' style='background-image: url(img/skype.svg)')
-          +e.A.link(href=site.github target='_blank' rel='nofollow' style='background-image: url(img/github.svg)')
+          +socLink({ href: site.vk, title: 'Вконтакте', icon: 'vk.svg' })
+          +socLink({ href: site.telegramLink, title: 'Телеграм', icon: 'telegram.svg' })
+          +socLink({ href: site.skypeLink, title: 'Скайп', icon: 'skype.svg' })
+          +socLink({ href: site.github, title: 'Гитхаб', icon: 'github.svg' })
