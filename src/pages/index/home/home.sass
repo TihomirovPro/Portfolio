@@ -2,4 +2,42 @@
 @import "../../styles/mixins"
   
 .home
+  position: relative
+  +bgImg('home.jpg', cover, center)
+  +pseudoBackground(.6, $black)
 
+  &__container
+    position: relative
+    +flex('center')
+    height: 100%
+    z-index: 1
+
+  &__title
+    text-align: center
+
+  &__name
+    position: relative
+    font-size: 50px
+    margin-bottom: 20px
+    +before(20%, 2px, $colorMain)
+      bottom: -10px
+      left: 50%
+      transform: translateX(-50%)
+
+  &__skill
+    font-size: 24px
+    margin-bottom: 42px
+
+  &__links
+    +flex('between')
+    width: 300px
+    margin: 0 auto
+
+  &__link
+    display: block
+    border-radius: 50%
+    +size(42px)
+    background-color: #fff
+    background-size: 60%
+    background-position: center
+    background-repeat: no-repeat
