@@ -1,10 +1,15 @@
 extends ../../layout/page
 
+include home/home
+include skills/skills
+include resume/resume
+include portfolio/portfolio
+
 //--------------------------------------------------//
 
 block vars
-  - var title = 'index'
-  - var description = 'index'
+  - var title = 'Сергей Тихомиров'
+  - var description = 'Frontend разработчик'
   - var pageId = 'indexPage'
 
 //--------------------------------------------------//
@@ -18,8 +23,11 @@ block startBody
 block endBody
   +footer()
   +script('main')
-  //- +script('index')
 
 //--------------------------------------------------//
 
 block content
+  +home
+  +skills
+  +resume
+  +portfolio
