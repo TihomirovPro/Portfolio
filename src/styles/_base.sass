@@ -1,20 +1,32 @@
+html
+  height: 100%
+
+body
+  min-height: 100%
+
+.layout
+  height: 100%
+
 .wrapper
-  position: relative
-  max-width: $wrapper
-  width: 100%
-  margin: 0 auto
-  padding: 0 $padding
-  +mobile
-    padding: 0 $paddingSm
+  padding-right: $padding
+  padding-left: $padding
 
-.content
-  position: relative
-  height: 100vh
+  +desktop(min)
+    padding-right: $wrapperLg
+    padding-left: $wrapperLg
 
-.sectionPage
-  position: absolute
-  top: 0
-  left: 0
+  +desktop
+    padding-right: $wrapperMd
+    padding-left: $wrapperMd
+
+  +tablet
+    padding-right: $wrapperTab
+    padding-left: $wrapperTab
+
+  +tabMd
+    padding-right: $wrapperMob
+    padding-left: $wrapperMob
+
+.imgFull
   +size(100%)
-
-.sectionTitle
+  object-fit: cover

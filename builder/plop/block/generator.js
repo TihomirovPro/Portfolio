@@ -1,4 +1,4 @@
-var isntEmptyName = require('../utils/isnt_empty')
+const isntEmptyName = require('../utils/isnt_empty')
 
 module.exports = function () {
   return {
@@ -11,19 +11,19 @@ module.exports = function () {
     }],
 
     actions: function () {
-      var actions = []
+      const actions = []
 
       // pug
       actions.push({
         type: 'add',
-        path: '../../src/blocks/{{camelCase name}}/{{camelCase name}}.pug',
+        path: '../../src/blocks/b-{{dashCase name}}/b-{{dashCase name}}.pug',
         templateFile: './block/block.pug'
       })
 
       // styl
       actions.push({
         type: 'add',
-        path: '../../src/blocks/{{camelCase name}}/{{camelCase name}}.sass',
+        path: '../../src/blocks/b-{{dashCase name}}/b-{{dashCase name}}.sass',
         templateFile: './block/block.sass'
       })
 

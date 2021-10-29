@@ -1,0 +1,35 @@
+include mixins/mixins
+include ../blocks/blocks
+include ../sections/sections
++blocks
++sections
+
+//--------------------------------------------------//
+
+block vars
+- const lang = 'ru'
+
+//--------------------------------------------------//
+
+doctype html
+html(lang=lang)
+  head
+    +head
+    block head
+
+  body(class=pageName)
+    block startBody
+    +header()
+
+    .layout
+      main.content
+        block content
+
+      aside.sidebar
+        block sidebar
+
+    +footer()
+    block endBody
+
+    +script('main')
+    block scripts

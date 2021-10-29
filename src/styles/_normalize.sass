@@ -1,68 +1,44 @@
 *,
 *:before,
 *:after
+  box-sizing: border-box
   margin: 0
   padding: 0
-  box-sizing: border-box
+  color: inherit
   font-weight: inherit
   line-height: inherit
-  color: inherit
+
   &:focus
     outline: 0
     background: 0
 
 html,
 body
-  display: block
   width: 100%
+  color: $colorText
   font-family: $fontMain
   font-size: $fontSize
-  font-weight: normal
-  color: $colorText
-  line-height: 1.15
-  -webkit-text-size-adjust: 100%
+  font-weight: 400
+  line-height: $lineHeight
   background-color: $colorTheme
+  -webkit-text-size-adjust: 100%
   text-rendering: optimizeLegibility
 
-header,
-nav,
-main,
-section,
-footer,
-label
-  display: block
-
 a
-  background-color: transparent
-  text-decoration: none
   color: inherit
+  text-decoration: none
+  background-color: transparent
 
 ul
   list-style-type: none
 
 img
   border-style: none
-
-button,
-input,
-optgroup,
-select,
-textarea
-  font-family: inherit
-  font-size: 100%
-  line-height: 1.15
-  border: none
-  border-radius: 0
-  box-shadow: none
-  background-color: transparent
-  font: inherit
-  color: inherit
-  letter-spacing: inherit
-  &:focus
-    outline: none
+  vertical-align: middle
 
 textarea
   overflow: auto
+  max-width: 100%
 
 button,
 input
@@ -79,10 +55,45 @@ button,
   cursor: pointer
   -webkit-appearance: button
 
-::-webkit-file-upload-button
-  -webkit-appearance: button
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+  border-style: none
+  padding: 0
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring
+  outline: 1px dotted ButtonText
+
+button,
+input,
+optgroup,
+select,
+textarea
+  color: inherit
   font: inherit
+  font-family: inherit
+  font-size: $fontSize
+  letter-spacing: inherit
+  line-height: $lineHeight
+  background-color: transparent
+  border: none
+  border-radius: 0
+  box-shadow: none
+
+  &:focus
+    outline: none
+
+::-webkit-file-upload-button
+  font: inherit
+  -webkit-appearance: button
 
 b,
 strong
-  font-weight: bold
+  font-weight: 900
+
+[hidden]
+  display: none

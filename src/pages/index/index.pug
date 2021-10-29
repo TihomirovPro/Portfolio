@@ -8,9 +8,9 @@ include portfolio/portfolio
 //--------------------------------------------------//
 
 block vars
-  - var title = 'Сергей Тихомиров'
-  - var description = 'Frontend разработчик'
-  - var pageId = 'indexPage'
+  - const title = 'Sergey Tihomirov'
+  - const description = 'frontend developer'
+  - const pageId = 'p-index'
 
 //--------------------------------------------------//
 
@@ -18,10 +18,8 @@ block head
   +style('index')
 
 block startBody
-  +header()
  
 block endBody
-  +footer()
   +script('main')
 
 //--------------------------------------------------//

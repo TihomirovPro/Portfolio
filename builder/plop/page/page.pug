@@ -3,23 +3,26 @@ extends ../../layout/page
 //--------------------------------------------------//
 
 block vars
-  - var title = '{{camelCase name}}'
-  - var description = '{{camelCase name}}'
-  - var pageId = '{{camelCase name}}Page'
+  -
+    const title = '{{dashCase name}}'
+    //- const description = '{{dashCase name}}'
+    //- const keywords = '{{dashCase name}}'
+    //- const pageClass = 'p-{{dashCase name}}'
 
 //--------------------------------------------------//
 
 block head
-  +style('{{camelCase name}}')
+  //- +style('aos')
+  //- +style('swiper')
+  +style('{{dashCase name}}')
 
 block startBody
-  +header()
- 
+
 block endBody
-  +footer()
-  +script('main')
-  //- +script('{{camelCase name}}')
+  //- +script('aos')
+  //- +script('swiper')
 
 //--------------------------------------------------//
 
 block content
+

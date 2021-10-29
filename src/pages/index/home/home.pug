@@ -1,14 +1,15 @@
 mixin socLink(data)
-  +e.A.link(href=data.href target='_blank' rel='nofollow' title=data.title style='background-image: url(img/' + data.icon + ')')
+  +e.A.link(href=data.href target='_blank' rel='nofollow' loading="lazy" width="24" height="24" title=data.title style='background-image: url(img/' + data.icon + ')')
 
 mixin home()
-  +b.SECTION.home.sectionPage#home
-    +e.container.wrapper
-      +e.title
-        +e.H1.name Сергей Тихомиров
-        +e.H2.skill Frontend developer
-        +e.links
-          +socLink({ href: site.vk, title: 'Вконтакте', icon: 'vk.svg' })
-          +socLink({ href: site.telegramLink, title: 'Телеграм', icon: 'telegram.svg' })
-          +socLink({ href: site.skypeLink, title: 'Скайп', icon: 'skype.svg' })
-          +socLink({ href: site.github, title: 'Гитхаб', icon: 'github.svg' })
+  +b.SECTION.home.wrapper
+    +initMenu()
+    +e.title
+      +e.H1.name Sergey Tihomirov
+      +e.P.skill Frontend developer
+    +e.IMG.img(src="img/main.jpg" width="800" height="800" loading="lazy" alt="Sergey Tihomirov - Frontend developer")
+    +e.links
+      +socLink({ href: '#', title: 'github', icon: 'github.svg' })
+      +socLink({ href: '#', title: 'Телеграм', icon: 'telegram.svg' })
+      +socLink({ href: '#', title: 'instagram', icon: 'instagram.svg' })
+      +socLink({ href: '#', title: 'Vkontakte', icon: 'vk.svg' })

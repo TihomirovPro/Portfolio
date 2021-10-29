@@ -1,0 +1,14 @@
+mixin select(data)
+  select(name=data.name)&attributes(attributes)
+    each item in data.options
+      option(value=item.value selected=item.selected)!=item.text
+
+mixin initSelect ()
+  +select({
+    name: 'select',
+    options: [
+      { value: '1', text: 'Значение 1', selected: true },
+      { value: '2', text: 'Значение 2' },
+      { value: '3', text: 'Значение 3' }
+    ]
+  }).select-js

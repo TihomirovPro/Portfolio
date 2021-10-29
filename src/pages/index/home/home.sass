@@ -1,50 +1,56 @@
 @import "../../styles/vars"
 @import "../../styles/mixins"
-  
+
 .home
+  overflow: hidden
+  z-index: 1
   position: relative
-  +bgImg('home.jpg', cover, center)
-  +pseudoBackground(.65, $black)
-
-  &__container
-    position: relative
-    +flex('center')
-    height: 100%
-    z-index: 1
-
+  display: grid
+  grid-template-rows: min-content min-content 1fr
+  height: 100vh
+  
   &__title
-    text-align: center
+    width: 500px
+    margin-top: 20%
+
+    +mobile
+      margin-top: 60%
 
   &__name
-    position: relative
-    font-size: 50px
-    margin-bottom: 24px
+    font-size: 56px
+    font-weight: 700
+
     +mobile
-      font-size: 10vw
-    +before(20%, 2px, $colorMain)
-      bottom: -12px
-      left: 50%
-      transform: translateX(-50%)
+      font-size: 32px
 
   &__skill
     font-size: 24px
-    margin-bottom: 48px
-    font-family: $fontSecond
+
+  &__img
+    z-index: -1
+    position: absolute
+    right: 0
+    bottom: 0
+    width: auto
+    height: 100%
+    object-fit: cover
+    pointer-events: none
+    mask-image: linear-gradient(to left, transparent, rgba(0,0,0,.7) 40% 60%, transparent)
+
+    +mobile
+      opacity: .6
+      width: 100%
 
   &__links
-    +flex('between')
-    max-width: 300px
-    width: 100%
-    margin: 0 auto
+    display: flex
+    gap: 24px
+    width: 500px
+    margin: auto 0 48px
 
   &__link
     display: block
-    border-radius: 50%
-    +size(42px)
-    background-color: #fff
-    background-size: 60%
+    +size(24px)
+    background-size: 100% auto
     background-position: center
     background-repeat: no-repeat
-    transition: .3s
-    &:hover
-      transform: scale(1.2)
+    filter: invert(1)

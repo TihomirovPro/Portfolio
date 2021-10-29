@@ -1,37 +1,29 @@
-var isntEmptyName = require('../utils/isnt_empty')
+const isntEmptyName = require('../utils/isnt_empty')
 
 module.exports = function () {
   return {
     description: 'Create a new page section',
-    prompts: [
-      {
-        type: 'input',
-        name: 'page',
-        message: 'page\'s name',
-        validate: isntEmptyName
-      },
-      {
-        type: 'input',
-        name: 'name',
-        message: 'Section\'s name',
-        validate: isntEmptyName
-      }
-    ],
+    prompts: [{
+      type: 'input',
+      name: 'name',
+      message: 'Section\'s name',
+      validate: isntEmptyName
+    }],
 
     actions: function () {
-      var actions = []
+      const actions = []
 
       // pug
       actions.push({
         type: 'add',
-        path: '../../src/pages/{{camelCase page}}/{{camelCase name}}/{{camelCase name}}.pug',
+        path: '../../src/sections/s-{{dashCase name}}/s-{{dashCase name}}.pug',
         templateFile: './section/section.pug'
       })
 
       // sass
       actions.push({
         type: 'add',
-        path: '../../src/pages/{{camelCase page}}/{{camelCase name}}/{{camelCase name}}.sass',
+        path: '../../src/sections/s-{{dashCase name}}/s-{{dashCase name}}.sass',
         templateFile: './section/section.sass'
       })
 

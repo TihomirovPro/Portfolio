@@ -1,0 +1,50 @@
+{
+	"folders": [
+    {
+      "name": "Portfolio",
+      "path": "."
+    },
+    {
+      "name": "layout",
+      "path": "src/layout"
+    },
+    {
+      "name": "pages",
+      "path": "src/pages"
+    },
+    {
+      "name": "blocks",
+      "path": "src/blocks"
+    },
+    {
+      "name": "sections",
+      "path": "src/sections"
+    },
+    {
+      "name": "js",
+      "path": "src/js"
+    },
+    {
+      "name": "styles",
+      "path": "src/styles"
+    },
+    {
+      "name": "images",
+      "path": "./images"
+    },
+    {
+      "name": "static",
+      "path": "./static"
+    },
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "stylelint.syntax": "sass",
+    "stylelint.snippet": [
+      "sass"
+    ],
+    "stylelint.validate": [
+      "sass",
+    ]
+  }
+}

@@ -1,3 +1,5 @@
-import './utils/fixForEach'
+// import modal from './modules/modal/modal'
 
-document.addEventListener('DOMContentLoaded', () => {})
+document.addEventListener('DOMContentLoaded', () => {
+  // modal()
+})

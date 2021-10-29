@@ -1,37 +1,30 @@
-include ../siteConfig.pug
+include mixins/mixins
+include ../blocks/blocks
+include ../sections/sections
++blocks
++sections
 
-//------------------------------//
-
-include bemto/bemto
-include mixins/head
-include mixins/style
-include mixins/script
-
-//------------------------------//
-
-include ../blocks/menu/menu
-include ../blocks/btn/btn
-include ../blocks/form/form
-
-include ../blocks/header/header
-include ../blocks/footer/footer
-
-include ../blocks/breadcrumbs/breadcrumbs
-
-//------------------------------//
+//--------------------------------------------------//
 
 block vars
+- const lang = 'ru'
+
+//--------------------------------------------------//
 
 doctype html
 html(lang=lang)
   head
-    +head()
+    +head
     block head
 
-  body(class=pageId)
+  body(class=pageClass)
     block startBody
+    +header()
 
-    main.content
+    main.layout
       block content
+      
+    +footer()
 
+    +script('main')
     block endBody
